@@ -72,7 +72,7 @@ while(True):
         per_vall = int(np.interp(langle, (80,160), (100, 0)))
         per_valr = int(np.interp(rangle, (80,160), (100, 0)))
         print(f'left percentage = {per_vall} and right percentage = {per_valr}')
-        cvzone.putTextRect(frame, f'l percentage = {per_vall} and r percentage = {per_valr}', pos=(20,20), scale=0.5, thickness=1,colorR=(0,0,0), font=cv2.LINE_AA)
+        cvzone.putTextRect(frame, f'left % = {per_vall} and right % = {per_valr}', pos=(20,20), scale=0.5, thickness=1,colorR=(0,0,0), font=cv2.LINE_AA)
         # print(lmlist[0])
         if(direction == 0):
             if( per_valr==100 and per_vall==100 ):
@@ -84,7 +84,7 @@ while(True):
                 direction = 0
         cvzone.putTextRect(frame, f"NOT A PUSH UP" , pos = (10,100), scale = 1, thickness=1, colorR=(0,0,0))
         if(int(pushup) == float(pushup)  and pushup > 0.5):
-            cvzone.putTextRect(frame, f"   PUSH UP   "  , pos = (10,100), scale = 1, thickness=1, colorR=(0,0,0))
+            cvzone.putTextRect(frame, f" PUSH UP : {pushup} "  , pos = (10,100), scale = 1, thickness=1, colorR=(0,0,0))
     cv2.imshow('Camera-window', frame)
     if(cv2.waitKey(1) == ord('q')):
         break
