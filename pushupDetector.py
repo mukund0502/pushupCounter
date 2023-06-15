@@ -13,6 +13,7 @@ import math
 import time
 import numpy as np 
 
+
 cam = cv2.VideoCapture(0)
 
 Detector = PoseDetector()
