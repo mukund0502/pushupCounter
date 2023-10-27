@@ -1,4 +1,4 @@
-#Pushup counter
+Pushup counter
 
 PREREQUISITES: 
     1. Make sure that python is installed in your system.
